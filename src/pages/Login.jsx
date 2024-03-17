@@ -5,16 +5,20 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const navigate = useNavigate();
+
+    // Changing the form fields value
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, [name]: value }));
       };
+
+      //Submitting the form
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const token = await handleLogin(formData);
-          localStorage.setItem("token",JSON.stringify(token))
-          navigate("/products")
+          const token = await handleLogin(formData); //Call the handle Login function
+          localStorage.setItem("token",JSON.stringify(token)) //Storing token in local storae
+          navigate("/") //On Successful login navigate to homepage
 
         } catch (error) {
            console.log("error",error)

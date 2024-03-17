@@ -4,14 +4,17 @@ import { decrementCartItem, incrementCartItem, removeCartItem } from '../Slice/C
 
 const CartItem = ({ item }) => {
     const dispatch = useDispatch()
+
+    //Incrementing quantity of a item in cart
     const handleIncrement = (id) => {
        dispatch(incrementCartItem(id))
     };
-    
+     //Decrementing quantity of a item in cart
     const handleDecrement = (id) => {
         dispatch(decrementCartItem(id))
     };
 
+    //Removing a perticular item from cart
     const handleRemove = (id) => {
         dispatch(removeCartItem(id))
     };

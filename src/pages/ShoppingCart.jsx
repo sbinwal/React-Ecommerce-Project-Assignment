@@ -119,7 +119,7 @@ const ShoppingCart = () => {
         CloseModal()
     }
 
-    //function to update values of buying details
+    //function to update addrees info
     const handleChange = (name, value) => {
         setUserDetails({
             ...userDetails,
@@ -127,6 +127,7 @@ const ShoppingCart = () => {
         });
     }
 
+    //function when user clicks on buy now
     const buyNow = () => {
         if(!token)
         {
@@ -142,6 +143,7 @@ const ShoppingCart = () => {
         dispatch(clearCart()); // Clearing cart from store
     };
 
+    //function to close the modal
     const CloseModal = () => {
         setModal(false)
     }

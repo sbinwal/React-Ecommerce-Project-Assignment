@@ -8,7 +8,7 @@ Folder Structure
 3. src -> pages(for showing the UI to user) -> Login(For Login Page), Product(For product info),Shopping Cart(For showing cart info)
 
 4. Login Flow
-   Created a login page with email field and password field and when user click on login button than handle submit function is called which is handling the API Call to the server. The token received from API response is stored in localstorage. Login API is called
+   Created a login page with email field and password field and when user click on login button than handle submit function is called which is handling the API Call to the server. The token received from API response is stored in localstorage. Login API is called.
 
 5. Product Listing Page
    Product Listing data is shown using productlisting component. I have made json for product data and map it in productlisting component.

@@ -7,7 +7,8 @@ import ProductList from '../components/Product/ProductList';
 const Product = () => {
   return (
     <div>
-      <ProductList products={products} />
+        {/* Calling Product List components  */}
+      <ProductList products={products} />  
     </div>
   );
 };

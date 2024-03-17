@@ -10,6 +10,7 @@ const Header = () => {
   const token = localStorage.getItem("token")
   const navigate = useNavigate()
   const Logout = () =>{
+    //On logout token will be removed from local storage and user will be redirected to homepage
     localStorage.removeItem("token")
     navigate("/")
   }

@@ -3,7 +3,7 @@ import { login } from "../services/api";
 
 const handleLogin = async ({email, password}) => {
   try {
-    const token = await login(email, password);
+    const token = await login(email, password);  // call login function
     return token;
   } catch (error) {
     alert("user not found")
