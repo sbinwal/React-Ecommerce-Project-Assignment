@@ -22,7 +22,7 @@ const CartItem = ({ item }) => {
                 <img src={item.productInfo.image} alt={item.productInfo.name} className="w-16 h-16 object-cover mr-4" />
                 <div>
                     <h3 className="text-lg font-semibold">{item.productInfo.name}</h3>
-                    <p className="text-gray-500">Price: ${item.productInfo.price * item?.quantity}</p>
+                    <p className="text-gray-500">Price: ₹{item.productInfo.price * item?.quantity}</p>
                 </div>
             </div>
             <div className="flex items-center">

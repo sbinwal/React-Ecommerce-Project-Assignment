@@ -147,7 +147,7 @@ const ShoppingCart = () => {
     }
 
     return (
-        <div className=" mt-8 mx-4">
+        <div className=" mt-8 mx-4 h-screen">
             {modal &&
                 <PaymentModal onClose={CloseModal} placeOrder={placeOrder} handleUpdate={handleChange} />
             }
@@ -161,8 +161,8 @@ const ShoppingCart = () => {
                             </li>
                         ))}
                     </ul>
-                    <div className="flex justify-end mt-8">
-                        <div className="border-t border-gray-200 w-full">
+                    <div className="flex justify-end mt-20">
+                        <div className=" border-gray-200 w-full">
                             <div className="flex justify-between py-2">
                                 <span className="font-semibold">Total:</span>
                                 <span className="font-semibold">₹{calculateTotal(cartItems)}</span>
@@ -173,7 +173,7 @@ const ShoppingCart = () => {
                     </div>
                 </div>
             ) : (
-                <p className='text-bold'>Your cart is empty</p>
+                <p className=' flex items-center justify-center text-3xl font-semibold text-red-500 h-screen'>Your cart is empty</p>
             )}
         </div>
     );

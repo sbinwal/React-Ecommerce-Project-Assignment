@@ -17,12 +17,9 @@ const Header = () => {
   return (
     <header className="bg-gray-800 text-white p-4 fixed top-0 left-0 right-0 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-      <img src="https://www.zarla.com/images/zarla-shop-stock-1x1-2400x2400-20220124-jyf4xp648jqxjqcjj9dc.png?crop=1:1,smart&width=250&dpr=2" alt="Logo" className="h-12 w-16" />
+      <Link to="/"><img src="https://www.zarla.com/images/zarla-shop-stock-1x1-2400x2400-20220124-jyf4xp648jqxjqcjj9dc.png?crop=1:1,smart&width=250&dpr=2" alt="Logo" className="h-12 w-16" /></Link>
         <nav className="flex space-x-4 items-center">
           <ul className="flex space-x-4">
-          {token && 
-              <li>Welcome Back</li>
-          }
             <li><Link to="/" className="hover:underline">Home</Link></li>
             <li><Link to="/products" className="hover:underline">Products</Link></li>
             {token ?

@@ -33,14 +33,14 @@ const ProductDescription = () => {
     }
 
     return (
-        <div className="mt-24">
+        <div className="mt-24 h-screen flex items-center justify-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center">
                 <div className="max-w-md ms-auto w-full h-full ">
                     <img src={product.image} alt={product.name} className="w-full h-auto" />
                 </div>
                 <div className="p-4 self-center">
                     <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
-                    <p className="text-md font-medium mb-2"><span className='font-bold text-lg '>Price: </span>${product.price}</p>
+                    <p className="text-md font-medium mb-2"><span className='font-bold text-lg '>Price: </span>₹{product.price}</p>
                     <p className="mb-4">{product.description}</p>
                     <button className="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600" onClick={storeItem}>{isInCart ? "Go to Cart" : "Add to Cart"}</button>
                     <div className="mt-4">

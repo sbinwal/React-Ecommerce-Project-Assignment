@@ -34,9 +34,10 @@ export const SendPurchaseData = async (orderInfo) => {
       throw new Error('failed');
     }
     const data = await response.json();
-    return data.token;
+     alert("Data send to server using webhook URL");
+     console.log("data",data)
   } catch (error) {
     console.error('Error caught:', error);
-    throw error;
+    // throw error;
   }
 };
