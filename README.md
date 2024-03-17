@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+About Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Folder Structure
+1. src -> components -> Auth(For user authentication) , CartItem(For Shoing Cart Items), Footer, Header, Modal,Product(Store Information about product like PDP,PLP),routes(contain routes information),services(For maupulating the data in the server),Slice(For creating slices for redux store), Store(for creating redux store)
 
-## Available Scripts
+2. utils - Contain two files APIRoutes(for storing API end points), Constants(For storing constants file like baseurl,webhookurl,webhookId,products information etc)
 
-In the project directory, you can run:
+3. src -> pages(for showing the UI to user) -> Login(For Login Page), Product(For product info),Shopping Cart(For showing cart info)
 
-### `npm start`
+4. Login Flow
+   Created a login page with email field and password field and when user click on login button than handle submit function is called which is handling the API Call to the server. The token received from API response is stored in localstorage. Login API is called
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. Product Listing Page
+   Product Listing data is shown using productlisting component. I have made json for product data and map it in productlisting component.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6. Product Decsription Page
+   Product Description page contain the information of a perticular product. When user clicks on a perticular card in PLP than using the state provided by react-router-dom I have passed that data to the product description page using useLocation hook, Using useLocation hook I have extracted the product data in PDP page.
 
-### `npm test`
+7. ADD TO CART
+   In PDP page I have add to cart button and when I click on that button than the product data object is stored in the redux store and local storage inside an array. I have initialised the state of cartSlice to the data which is present in the localstorage. By doing this if we refresh the page than also the cart data will persist.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+8. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
