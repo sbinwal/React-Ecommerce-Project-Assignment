@@ -19,6 +19,18 @@ Folder Structure
 7. ADD TO CART
    In PDP page I have add to cart button and when I click on that button than the product data object is stored in the redux store and local storage inside an array. I have initialised the state of cartSlice to the data which is present in the localstorage. By doing this if we refresh the page than also the cart data will persist.
 
-8. 
+8. Shopping Cart Page
+   In shopping cart page I have displayed all the cart items and for every cart item there is an option to decrement,increment the quantity and remove that perticular cart. When user clicks on + button than incrementCartItem action wil be dispatched and quantity of that perticular item will be increased and vice versa for decrement. When user clicks on Remove button than that perticular cart item will be removed.
+
+9. Clearing the Cart
+   When user clicks on CLEAR CART than all the items wil be removed from the cart. 
+
+10. Buy NOW
+    When user click on buy now button than a popup will be open to add the address info like address, pincode, phone number.
+
+11. PLACE ORDER
+    When user clicks on PLACE ORDER than razor pay API will be called and on successfull payment the user info will be sent to the server using webhook url.
+    
+
 
 
