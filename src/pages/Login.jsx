@@ -65,15 +65,19 @@ const Login = () => {
               />
               <button
                 type="button"
-                className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 focus:outline-none"
-                onClick={togglePasswordVisibility}
+                className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 focus:outline-none z-50"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent the form from being submitted
+                  togglePasswordVisibility();
+                }}
               >
                 {showPassword ? (
-               <img src='/images/openEye.svg' alt='open eye' className='h-3'/>
+                  <img src='/images/openEye.svg' alt='open eye' className='h-3' />
                 ) : (
                   <img src='/images/closedEye.svg' alt='close eye' className='h-3'></img>
                 )}
               </button>
+
             </div>
           </div>
 
