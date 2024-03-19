@@ -19,7 +19,7 @@ const Header = () => {
   const GoToCart = () =>{
     if(!token)
     {
-    alert("Please login firt to view cart items")
+    alert("Please login first to view cart items")
     }
     navigate("/viewcart")
   }
@@ -33,9 +33,9 @@ const Header = () => {
             <li><Link to="/" className="hover:underline">Home</Link></li>
             <li><Link to="/products" className="hover:underline">Products</Link></li>
             {token ?
-               <li><a href="/login" className="hover:underline" onClick={Logout}>Logout</a></li>
+               <li className="hover:underline cursor-pointer" onClick={Logout}>Logout</li>
             :
-            <li><a href="/login" className="hover:underline">Login</a></li>
+            <li><Link to="/login" className="hover:underline">Login</Link></li>
 }
           </ul>
           <div className="relative cursor-pointer" onClick={()=>{GoToCart()}}>
