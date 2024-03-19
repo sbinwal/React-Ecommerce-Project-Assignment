@@ -15,6 +15,15 @@ const Header = () => {
     navigate("/")
   }
 
+  //function tp go to cart page
+  const GoToCart = () =>{
+    if(!token)
+    {
+    alert("Please login firt to view cart items")
+    }
+    navigate("/viewcart")
+  }
+
   return (
     <header className="bg-gray-800 text-white p-4 fixed top-0 left-0 right-0 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
@@ -29,7 +38,7 @@ const Header = () => {
             <li><a href="/login" className="hover:underline">Login</a></li>
 }
           </ul>
-          <Link className="relative" to = "/viewcart">
+          <div className="relative cursor-pointer" onClick={()=>{GoToCart()}}>
             <FontAwesomeIcon icon={faShoppingCart} className="text-white text-2xl cursor-pointer" />
             <span className="ml-[2px]">Cart</span>
             {cartItems?.length > 0 && (
@@ -38,7 +47,7 @@ const Header = () => {
               </span>
             )}
             
-          </Link>
+          </div>
         </nav>
       </div>
     </header>

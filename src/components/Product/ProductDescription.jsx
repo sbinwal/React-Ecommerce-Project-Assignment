@@ -12,15 +12,20 @@ const ProductDescription = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const product = location.state
+    const token = localStorage.getItem("token")
     // Getting existing cart items from local storage or initializing an empty array
     const existingCartItems = useSelector(state => state.cartInfo.cartDetails) || []
     const[isInCart,setIsInCart] = useState(existingCartItems.some(item => item.productInfo.id === product.id))
-
+   
 
     const storeItem = () => {
 
         if(isInCart)
         {
+            if(!token)
+            {
+                alert("Please login firt to view cart items")
+            }
         navigate("/viewcart")
         return
         }

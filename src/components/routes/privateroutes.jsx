@@ -4,16 +4,19 @@ const PrivateRoute = ({ Component }) => {
   const token = localStorage.getItem('token');
   const location = useLocation();
 
-  // Check if the user is trying to access "/" or "/login"
-  const isHomeOrLogin = location.pathname === '/login';
+  // Check if the user is trying to access "/viewcart" or "/login"
+  const isLogin = location.pathname === '/login';
+
+  //check if the user is trying to access "/viewcart"
+  const isCart = location.pathname === '/viewcart';
 
   // Check if the user is authenticated
   const isAuthenticated = !!token;
 
   return isAuthenticated ? (
-    isHomeOrLogin ?  <Navigate to="/" />: <Component />
+    isLogin ?  <Navigate to="/" />: <Component />
   ) : (
-    <Component/>
+    isCart ? <Navigate to = "/login"/> : <Component/>
   );
 };
 

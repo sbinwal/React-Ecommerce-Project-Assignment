@@ -13,11 +13,11 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<PrivateRoute Component={Product} />} />
+        <Route path="/" element={<Product />} />
+          <Route path="/products" element={<Product />} />
+          <Route path="/product/:productSlug" element={<ProductDescription />} />
           <Route path="/login" element={<PrivateRoute Component={Login} />} />
-          <Route path="/product/:productSlug" element={<PrivateRoute Component={ProductDescription} />} />
-      <Route path="/products" element={<PrivateRoute Component={Product} />} />
-      <Route path="/viewcart" element={<PrivateRoute Component={ShoppingCart} />} />
+          <Route path="/viewcart" element={<PrivateRoute Component={ShoppingCart} />} />
         </Routes>
         <Footer />
       </Router>
